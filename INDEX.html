@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>專業證照與認證 | 王國鎮 KUO-CHEN WANG</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Sans TC -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#FDFBF7',      /* 暖米白 */
+              cardBg: '#FAF6F0',  /* 燕麥色 */
+              tagBg: '#F3ECE0',   /* 淺金褐 */
+              primary: '#4A3C31', /* 深焦糖 */
+              secondary: '#8D623E', /* 大地棕 */
+              border: '#EBE5DB',   /* 淺褐框線 */
+              hover: '#765132'     /* 深點綴色 */
+            }
+          },
+          fontFamily: {
+            sans: ['Noto Sans TC', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #FDFBF7;
+    }
+    /* 隱藏捲動軸但保有功能 */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* 列印專用設定 */
+    @media print {
+      body {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-card {
+        border: 1px solid #cccccc !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body class="text-brand-primary min-h-screen flex flex-col justify-between antialiased selection:bg-brand-tagBg selection:text-brand-secondary">
+
+  <!-- 頂部導航列 (No-Print) -->
+  <header class="no-print border-b border-brand-border bg-brand-bg/80 backdrop-blur-md sticky top-0 z-30 transition-all">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-brand-secondary flex items-center justify-center text-white font-bold text-sm">
+          W
+        </div>
+        <div>
+          <span class="font-bold tracking-wide text-brand-primary">王國鎮</span>
+          <span class="text-xs text-brand-secondary block -mt-1 font-medium">KUO-CHEN WANG</span>
+        </div>
+      </div>
+      
+      <!-- 返回個人履歷按鈕已移除 -->
+    </div>
+  </header>
+
+  <!-- 主要內容區 -->
+  <main class="max-w-5xl w-full mx-auto px-4 py-8 md:py-12 flex-grow">
+    
+    <!-- 頁面標題區 (No-Print) -->
+    <div class="no-print text-center max-w-2xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 text-brand-secondary font-semibold text-xs tracking-widest uppercase mb-3 bg-brand-tagBg px-3 py-1 rounded-full">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
+        </svg>
+        CERTIFICATES & CREDENTIALS
+      </div>
+      <h1 class="text-2xl md:text-3.5xl font-black tracking-tight text-brand-primary mb-3">
+        專業證照與技術認證
+      </h1>
+      <p class="text-sm text-brand-secondary font-medium leading-relaxed">
+        展示個人在「數據分析、AI 數位教育與辦公自動化」領域的專業實力，<br class="hidden sm:inline">所有證照皆提供官方驗證與效期追蹤。
+      </p>
+    </div>
+
+    <!-- 證照網格卡片區 -->
+    <div id="certificates-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+      
+      <!-- 證照一：Gemini Certified Educator -->
+      <div class="cert-card print-card flex flex-col justify-between p-6 md:p-8 bg-brand-cardBg rounded-3xl border border-brand-border hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5" data-category="ai-edu">
+        <div class="space-y-6">
+          <!-- 頂部發證方與標籤 -->
+          <div class="flex items-center justify-between">
+            <span class="text-2xs font-extrabold uppercase tracking-widest text-[#1a73e8] bg-[#e8f0fe] px-2.5 py-1 rounded-full">
+              Google for Education
+            </span>
+            <span class="text-xs text-brand-secondary font-medium flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+              認證有效
+            </span>
+          </div>
+
+          <!-- 網頁模擬高畫質證書預覽圖 (可點擊放大) -->
+          <div onclick="openModal('gemini')" class="relative group cursor-zoom-in overflow-hidden rounded-2xl border border-brand-border shadow-inner bg-white p-6 aspect-[4/3] flex flex-col justify-between items-center text-center">
+            <!-- 背景裝飾 -->
+            <div class="absolute inset-0 bg-[radial-gradient(#f0f4f9_1px,transparent_1px)] [background-size:16px_16px] opacity-60"></div>
+            
+            <!-- 證書四大星芒裝飾 -->
+            <div class="relative z-10 mt-2">
+              <svg class="w-12 h-12" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M256 32L290.3 190.3L448 224L290.3 257.7L256 416L221.7 257.7L64 224L221.7 190.3L256 32Z" fill="url(#geminiGrad)" />
+                <defs>
+                  <linearGradient id="geminiGrad" x1="64" y1="32" x2="448" y2="416" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#4285F4" />
+                    <stop offset="30%" stop-color="#EA4335" />
+                    <stop offset="70%" stop-color="#FBBC05" />
+                    <stop offset="100%" stop-color="#34A853" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div class="relative z-10 my-auto">
+              <h3 class="text-lg md:text-xl font-bold tracking-tight text-gray-800">Gemini Certified Educator</h3>
+              <p class="text-2xs text-gray-500 max-w-[280px] mx-auto mt-2 leading-relaxed">
+                Demonstrated the knowledge, skills, and competencies needed to use Google AI in education.
+              </p>
+              <div class="w-12 h-0.5 bg-gray-200 mx-auto my-3"></div>
+              <p class="text-sm font-semibold text-gray-700 tracking-wider">KUO-CHEN WANG</p>
+            </div>
+
+            <!-- 證書底部資訊 -->
+            <div class="relative z-10 w-full flex justify-between items-end border-t border-gray-100 pt-3 text-[10px] text-gray-400">
+              <div class="text-left">
+                <p>Issued: <span class="font-medium text-gray-600">11/05/2026</span></p>
+              </div>
+              <div class="text-right">
+                <p>Expires: <span class="font-medium text-gray-600">15/05/2029</span></p>
+              </div>
+            </div>
+
+            <!-- 懸停放大提示 (No-Print) -->
+            <div class="no-print absolute inset-0 bg-brand-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+              <div class="bg-white/95 px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 text-xs font-semibold text-brand-primary">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.196 9.196a2.25 2.25 0 102.25 2.25l-2.25-2.25z"/>
+                </svg>
+                點擊檢視高畫質原圖
+              </div>
+            </div>
+          </div>
+
+          <!-- 說明文案與細節 -->
+          <div class="space-y-3 pb-2">
+            <h2 class="text-xl font-bold tracking-tight text-brand-primary">
+              Gemini 認證教育家
+            </h2>
+            <p class="text-sm text-brand-secondary leading-relaxed">
+              Google 官方核發之 AI 教育應用專業認證。證明具備將 Google Gemini 大型語言模型、生成式 AI 工具無縫融入課程設計、教案開發及行政流程自動化的全方位實操能力。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 證照二：Microsoft Office Specialist: Excel Expert -->
+      <div class="cert-card print-card flex flex-col justify-between p-6 md:p-8 bg-brand-cardBg rounded-3xl border border-brand-border hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5" data-category="data-auto">
+        <div class="space-y-6">
+          <!-- 頂部發證方與標籤 -->
+          <div class="flex items-center justify-between">
+            <span class="text-2xs font-extrabold uppercase tracking-widest text-[#d83b01] bg-[#fde7e9] px-2.5 py-1 rounded-full">
+              Microsoft Certification
+            </span>
+            <span class="text-xs text-brand-secondary font-medium flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+              認證有效
+            </span>
+          </div>
+
+          <!-- 網頁模擬高畫質證書預覽圖 (可點擊放大) -->
+          <div onclick="openModal('mos')" class="relative group cursor-zoom-in overflow-hidden rounded-2xl border border-brand-border shadow-inner bg-white p-6 aspect-[4/3] flex flex-col justify-between items-center text-center">
+            <!-- 背景紋理裝飾 -->
+            <div class="absolute inset-0 bg-[radial-gradient(#fde7e9_0.5px,transparent_0.5px)] [background-size:12px_12px] opacity-40"></div>
+            
+            <!-- MOS 紅色徽章 -->
+            <div class="relative z-10 mt-1 flex justify-center">
+              <div class="w-14 h-14 rounded-full bg-[#d83b01] p-0.5 shadow-md flex items-center justify-center text-white">
+                <div class="w-full h-full rounded-full border border-dashed border-white/60 flex flex-col items-center justify-center p-1">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 12 10 10-4.48 10-12S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                  </svg>
+                  <span class="text-[5px] font-black uppercase mt-0.5 tracking-tighter">MOS CERTIFIED</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative z-10 my-auto">
+              <p class="text-[9px] font-black text-[#d83b01] tracking-widest uppercase">Microsoft Office Specialist</p>
+              <h3 class="text-lg md:text-xl font-bold tracking-tight text-gray-800 -mt-0.5">Excel Expert</h3>
+              <p class="text-[9px] text-gray-400 mt-1">Microsoft 365 Apps</p>
+              <div class="w-12 h-0.5 bg-gray-200 mx-auto my-2.5"></div>
+              <p class="text-sm font-semibold text-gray-700 tracking-wider">KUO-CHEN WANG</p>
+            </div>
+
+            <!-- 證書底部資訊 -->
+            <div class="relative z-10 w-full flex justify-between items-end border-t border-gray-100 pt-3 text-[10px] text-gray-400">
+              <div class="text-left">
+                <p>Date: <span class="font-medium text-gray-600">May 22, 2026</span></p>
+                <p>Code: <span class="font-medium text-gray-600">nwrb-uT4e</span></p>
+              </div>
+              <div class="text-right">
+                <p class="text-[8px] italic text-gray-400">Verify at verify.certiport.com</p>
+                <p class="font-bold text-gray-500 text-[9px]">Satya Nadella <span class="block text-[7px] text-gray-400 font-normal">CEO, Microsoft</span></p>
+              </div>
+            </div>
+
+            <!-- 懸停放大提示 (No-Print) -->
+            <div class="no-print absolute inset-0 bg-brand-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+              <div class="bg-white/95 px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 text-xs font-semibold text-brand-primary">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637zM10.196 9.196a2.25 2.25 0 102.25 2.25l-2.25-2.25z"/>
+                </svg>
+                點擊檢視高畫質原圖
+              </div>
+            </div>
+          </div>
+
+          <!-- 說明文案與細節 -->
+          <div class="space-y-3 pb-2">
+            <h2 class="text-xl font-bold tracking-tight text-brand-primary">
+              MOS Excel Expert 專家認證
+            </h2>
+            <p class="text-sm text-brand-secondary leading-relaxed">
+              微軟官方核發之 Excel 最高階專家級認證。具備進階邏輯公式（如多重巢狀 XLOOKUP、INDEX/MATCH）、大型數據大綱分析、精算財務建模、巨集錄製與流程自動化，以及跨系統資料清洗之整合實務實力。
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- 頁尾 (No-Print) -->
+  <footer class="no-print border-t border-brand-border bg-brand-cardBg/60 py-6 text-center text-2xs text-brand-secondary">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-center">
+      <p>© 2026 王國鎮 KUO-CHEN WANG. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== 互動彈出視窗 (Modal) ==================== -->
+  <div id="cert-modal" class="no-print fixed inset-0 z-50 bg-brand-primary/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-white rounded-3xl max-w-3xl w-full p-4 md:p-6 shadow-2xl relative transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+      
+      <!-- 關閉按鈕 -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-brand-secondary hover:text-brand-primary bg-brand-cardBg p-2 rounded-full border border-brand-border transition-colors z-10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <!-- 證照大圖呈現區域 -->
+      <div class="w-full aspect-[4/3] bg-brand-bg rounded-2xl border border-brand-border flex items-center justify-center overflow-hidden relative">
+        
+        <!-- Gemini 證照放大渲染版 -->
+        <div id="modal-content-gemini" class="hidden w-full h-full p-6 md:p-12 flex flex-col justify-between items-center text-center bg-white">
+          <div class="absolute inset-0 bg-[radial-gradient(#f0f4f9_1.5px,transparent_1.5px)] [background-size:20px_20px] opacity-70"></div>
+          
+          <!-- 頂部 Logo -->
+          <div class="relative z-10">
+            <svg class="w-16 h-16 mx-auto" viewBox="0 0 512 512" fill="none">
+              <path d="M256 32L290.3 190.3L448 224L290.3 257.7L256 416L221.7 257.7L64 224L221.7 190.3L256 32Z" fill="url(#geminiGradModal)" />
+              <defs>
+                <linearGradient id="geminiGradModal" x1="64" y1="32" x2="448" y2="416" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#4285F4" />
+                  <stop offset="30%" stop-color="#EA4335" />
+                  <stop offset="70%" stop-color="#FBBC05" />
+                  <stop offset="100%" stop-color="#34A853" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div class="relative z-10 my-auto">
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-800">Gemini Certified Educator</h2>
+            <p class="text-xs md:text-sm text-gray-500 mt-2">This qualification is awarded to</p>
+            <p class="text-xl md:text-2xl font-black text-gray-900 tracking-widest my-4">KUO-CHEN WANG</p>
+            <p class="text-xs text-gray-500 max-w-md mx-auto leading-relaxed">
+              for having demonstrated the knowledge, skills, and basic competencies needed<br>to use Google AI in education.
+            </p>
+          </div>
+
+          <!-- 底部署名 -->
+          <div class="relative z-10 w-full flex justify-between items-end border-t border-gray-100 pt-4 text-xs text-gray-400">
+            <div class="text-left">
+              <p>Certificate issued on: <span class="font-semibold text-gray-700">11/05/2026</span></p>
+            </div>
+            <div class="text-center font-bold text-gray-600">
+              <span class="text-[#4285F4]">G</span><span class="text-[#EA4335]">o</span><span class="text-[#FBBC05]">o</span><span class="text-[#4285F4]">g</span><span class="text-[#34A853]">l</span><span class="text-[#EA4335]">e</span> <span class="text-gray-500 font-medium">for Education</span>
+            </div>
+            <div class="text-right">
+              <p>Certificate valid through: <span class="font-semibold text-gray-700">15/05/2029</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOS Excel 證照放大渲染版 -->
+        <div id="modal-content-mos" class="hidden w-full h-full p-6 md:p-12 flex flex-col justify-between items-center text-center bg-white">
+          <div class="absolute inset-0 bg-[radial-gradient(#fde7e9_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+          
+          <div class="relative z-10 flex items-center justify-center gap-2">
+            <!-- 仿實體紅色印章 -->
+            <div class="w-16 h-16 rounded-full bg-[#d83b01] p-1 shadow-md flex items-center justify-center text-white">
+              <div class="w-full h-full rounded-full border-2 border-dashed border-white/50 flex flex-col items-center justify-center">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 12 10 10-4.48 10-12S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span class="text-[6px] font-black tracking-tight mt-0.5">MOS OFFICIAL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative z-10 my-auto">
+            <p class="text-xs font-black text-[#d83b01] tracking-widest uppercase">Microsoft Office Specialist</p>
+            <h2 class="text-2xl md:text-3.5xl font-extrabold tracking-tight text-gray-800">Excel Expert</h2>
+            <p class="text-xs text-gray-400 mt-1">Microsoft 365 Apps</p>
+            <div class="w-16 h-0.5 bg-[#d83b01]/20 mx-auto my-3"></div>
+            <p class="text-sm text-gray-500">This certifies that</p>
+            <p class="text-xl md:text-2xl font-black text-gray-900 tracking-wider my-1">KUO-CHEN WANG</p>
+            <p class="text-xs text-gray-500 max-w-sm mx-auto mt-2 leading-relaxed">
+              has successfully completed the requirements to be recognized as an expert in Microsoft Excel solutions.
+            </p>
+          </div>
+
+          <!-- 底部署名 -->
+          <div class="relative z-10 w-full flex justify-between items-end border-t border-gray-100 pt-4 text-[10px] md:text-xs text-gray-400">
+            <div class="text-left">
+              <p>Date of achievement: <span class="font-semibold text-gray-700">May 22, 2026</span></p>
+              <p>Verification code: <span class="font-semibold text-[#d83b01] bg-[#fde7e9] px-1.5 py-0.5 rounded ml-1">nwrb-uT4e</span></p>
+            </div>
+            <div class="text-right flex flex-col items-end">
+              <p class="text-gray-400 text-[10px] italic">verify.certiport.com</p>
+              <p class="font-bold text-gray-700 text-sm mt-1">Satya Nadella <span class="block text-[8px] text-gray-400 font-normal text-right">Chief Executive Officer</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 視窗下方資訊與導覽 -->
+      <div class="mt-4 flex items-center justify-between text-xs">
+        <span class="text-brand-secondary">點擊背景或右上角關閉檢視器</span>
+        <button onclick="closeModal()" class="px-5 py-2 bg-brand-primary hover:bg-[#382d24] text-white rounded-xl font-bold transition-all">
+          完成關閉
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== 程式邏輯控制 (JS) ==================== -->
+  <script>
+    // 1. 證照燈箱 (Modal) 顯示控制
+    function openModal(certType) {
+      const modal = document.getElementById('cert-modal');
+      const modalBox = modal.querySelector('div');
+      const geminiContent = document.getElementById('modal-content-gemini');
+      const mosContent = document.getElementById('modal-content-mos');
+
+      // 隱藏所有 Modal 內部內容
+      geminiContent.classList.add('hidden');
+      mosContent.classList.add('hidden');
+
+      // 顯示目標證照
+      if (certType === 'gemini') {
+        geminiContent.classList.remove('hidden');
+      } else if (certType === 'mos') {
+        mosContent.classList.remove('hidden');
+      }
+
+      // 開啟 Modal 動畫
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        modalBox.classList.remove('scale-95');
+        modalBox.classList.add('scale-100');
+      }, 50);
+
+      // 鎖定背景網頁捲動
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('cert-modal');
+      const modalBox = modal.querySelector('div');
+
+      modalBox.classList.remove('scale-100');
+      modalBox.classList.add('scale-95');
+      
+      setTimeout(() => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.classList.remove('overflow-hidden');
+      }, 150);
+    }
+
+    // 點擊背景可直接關閉
+    document.getElementById('cert-modal').addEventListener('click', closeModal);
+  </script>
+</body>
+</html>
